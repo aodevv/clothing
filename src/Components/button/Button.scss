@@ -12,10 +12,22 @@
   padding: 0px 35px;
   text-transform: uppercase;
   cursor: pointer;
-  transition: all 60ms linear;
+  transition: all 0.1s linear;
 
   &:hover {
     background-color: white;
     color: black;
+  }
+}
+
+.google-sign-in {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+
+  &:hover {
+    background-color: #357ae8;
+    border: none;
+    color: white;
   }
 }

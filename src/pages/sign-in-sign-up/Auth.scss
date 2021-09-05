@@ -1,0 +1,20 @@
+.auth {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px auto;
+}
+
+@media screen and (max-width: 1300px) {
+  .auth {
+    width: 80%;
+    padding: 0 60px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .auth {
+    width: 100%;
+    padding: 0 60px;
+  }
+}

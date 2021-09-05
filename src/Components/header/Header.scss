@@ -1,15 +1,16 @@
 .header {
   height: 75px;
-  width: 100%;
+  //width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 25px;
+  padding: 0 80px;
 
   .logo-container {
     height: 100%;
     width: 70px;
-    padding: 25px;
+    padding: 25px 25px 25px 0;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -24,6 +25,7 @@
 
     .option {
       padding: 0px 10px;
+      cursor: pointer;
     }
   }
 }
