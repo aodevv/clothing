@@ -4,6 +4,7 @@ import { createStructuredSelector } from "reselect";
 
 //import CartItem from "../../Components/cart-item/CartItem";
 import ChekoutItem from "../../Components/chekout-item/ChekoutItem";
+import StripeButton from "../../Components/stripe/StripeButton";
 
 import {
   selectCartItems,
@@ -36,6 +37,12 @@ const Checkout = ({ cartItems, total }) => {
         <ChekoutItem key={cartItem.id} cartItem={cartItem} />
       ))}
       <div className="total">Total: ${total}</div>
+      <div className="test-warning">
+        *Please use the following test card for payment*
+        <br />
+        4242 4242 4242 4242 - Exp: 01/22 - CVV: 123
+      </div>
+      <StripeButton price={total} />
     </div>
   );
 };
