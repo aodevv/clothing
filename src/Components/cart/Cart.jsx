@@ -9,28 +9,29 @@ import { selectCartItems } from "../../redux/cart/cart.selectors";
 import { toggleCart } from "../../redux/cart/cart.actions";
 
 import "./Cart.scss";
+import { CartButton, CartContainer, CartItems, EmptyMsg } from "./Cart.styles";
 
 const Cart = ({ cartItems, history, dispatch }) => {
   return (
-    <div className="cart">
-      <div className="cart-items">
+    <CartContainer>
+      <CartItems>
         {cartItems.length ? (
           cartItems.map((cartItem) => (
             <CartItem key={cartItem.id} item={cartItem} />
           ))
         ) : (
-          <span className="empty-message">Your cart is empty</span>
+          <EmptyMsg>Your cart is empty</EmptyMsg>
         )}
-      </div>
-      <Button
+      </CartItems>
+      <CartButton
         onClick={() => {
           history.push("/checkout");
           dispatch(toggleCart());
         }}
       >
         GO TO CHECKOUT
-      </Button>
-    </div>
+      </CartButton>
+    </CartContainer>
   );
 };
 
